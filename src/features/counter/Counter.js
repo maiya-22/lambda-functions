@@ -18,7 +18,7 @@ export function Counter() {
   const incrementValue = Number(incrementAmount) || 0;
 
   const fetchData = async () => {
-    const response = await axios.get(".netlify/functions/api");
+    const response = await axios.get("/.netlify/functions/api");
     console.log("response:", response);
   };
 
