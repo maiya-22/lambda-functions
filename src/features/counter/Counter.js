@@ -15,7 +15,6 @@ export function Counter() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [text, setText] = useState("...loading");
-  const incrementValue = Number(incrementAmount) || 0;
 
   const fetchData = async (URL) => {
     const response = await axios.get(URL);
