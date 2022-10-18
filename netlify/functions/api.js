@@ -1,4 +1,4 @@
-//  axios from "axios";
+import axios from "axios";
 
 const SECRET = process.env.SECRET || "not found";
 const IS_AXIOS_DEFINED = !!axios;
