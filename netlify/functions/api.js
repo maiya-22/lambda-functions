@@ -1,7 +1,7 @@
 //  axios from "axios";
 
 const SECRET = process.env.SECRET || "not found";
-// const IS_AXIOS_DEFINED = !!axios;
+const IS_AXIOS_DEFINED = !!axios;
 
 exports.handler = async (event, context) => {
   try {
@@ -9,7 +9,7 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       body: JSON.stringify({
         hello: "world",
-        // isAxiosDefined: IS_AXIOS_DEFINED,
+        isAxiosDefined: IS_AXIOS_DEFINED,
         secret: SECRET,
       }),
     };
