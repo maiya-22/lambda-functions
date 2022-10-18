@@ -11,7 +11,7 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       body: JSON.stringify({
         hello: "world",
-        res,
+        res: res.data,
         isAxiosDefined: IS_AXIOS_DEFINED,
         secret: SECRET,
       }),
