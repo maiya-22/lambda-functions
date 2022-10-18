@@ -14,23 +14,24 @@ import styles from "./Counter.module.css";
 export function Counter() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
-  const [incrementAmount, setIncrementAmount] = useState("2");
+  const [text, setText] = useState("...loading");
   const incrementValue = Number(incrementAmount) || 0;
 
-  const fetchData = async () => {
-    const response = await axios.get("/.netlify/functions/api");
+  const fetchData = async (URL) => {
+    const response = await axios.get(URL);
     console.log("response:", response);
+    setText(response.data.res.title);
   };
 
   useEffect(() => {
-    fetchData();
+    fetchData("/.netlify/functions/api");
     return () => {};
   }, []);
 
   return (
     <div>
       <div className={styles.row}>
-        <div>place holder text</div>
+        <div>{text}</div>
       </div>
     </div>
   );
