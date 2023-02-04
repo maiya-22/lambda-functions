@@ -5,3 +5,4 @@
 2. Push repo to github
 3. Create a site in Netlify, and link it to the repo with continuous deploy.
 4. Set the .env variables in the site configurations.
+5. How to run app ..
